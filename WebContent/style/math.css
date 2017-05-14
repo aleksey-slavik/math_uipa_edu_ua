@@ -1,0 +1,384 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-image: linear-gradient(rgb(172, 0, 215), rgb(130, 6, 255),
+		#723E81);
+}
+
+.header {
+	text-align: center;
+	margin-top: 3%; 
+	font-size : 30px;
+	font-family: Gabriola;
+}
+
+.footer {
+	text-align: right;
+	margin-bottom: 3%;
+	font-size: 10px;
+	font-family: Verdana;
+}
+
+#menu {
+	padding: 20px 0;
+	margin: 0 auto;
+	max-width: 90%;
+	box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+#menu li {
+	float: left;
+	margin-right: 0%;
+	position: relative;
+	
+}
+
+#menu li a {
+	display: block;
+	color: #e2d8e5;
+	text-trasform: uppercase;
+}
+
+#menu ul {
+	position: absolute;
+	display: none;
+}
+
+#menu ul li {
+	padding-top: 5px;
+	float: none;
+	background: rgb(130, 6, 255);
+	border-radius: 10px;
+	width: 150%;
+	margin-top: 1%;
+}
+
+#menu ul a {
+	while-space: nowrap;
+	display: block;
+}
+
+#menu li:hover ul {
+	left: 0;
+	opacity: 1;
+	display: block;
+}
+
+#menu li:hover a {
+	opacity: 1;
+}
+
+#menu li:hover ul a {
+	text-decoration: none;
+	-webkit-transition: -webkit-transform 0.075s linear;
+}
+
+#menu li:hover ul li a:hover {
+	opacity: 1;
+}
+
+ul {
+	margin: 0;
+	margin-left: 2%;
+	padding-left: 0;
+	list-style: none;
+	float: center;
+	height: 4%;
+	line-height: 230%;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+	display: inline-block;
+	position: relative;
+}
+
+li a {
+	color: #e2d8e5;
+	text-transform: uppercase;
+}
+
+li {
+	display: inline-block;
+	margin-left: 4%;
+	transition: 0.5s linear;
+}
+
+li a:after {
+	content: "";
+	width: 0;
+	height: 4%;
+	position: absolute;
+	left: 0;
+	bottom: 25%;
+	background: #e2d8e5;
+	transition: all 0.5s linear;
+}
+
+li a:hover:after {
+	width: 100%;
+}
+
+.news_list {
+	padding: 10px 0;
+	margin-left: 5%;
+	width: 90%;
+	height: 25%;
+	border: 1px solid #000000;
+}
+
+.news_item {
+	margin-top: 10%;
+	width: 90%;
+	height: 5%;
+	border: 1px solid #000000;
+}
+
+.news_image {
+	margin-right: 0%;
+	max-height: 150;
+	width: 150;
+	border: 1px solid #000000;
+}
+
+.news_title {
+	text-align: center;
+	font-size: 20px;
+	font-family: Verdana;
+	border: 1px solid #000000;
+
+}
+
+.news_date {
+	text-align: left;
+	font-size: 10px;
+	font-family: Verdana;
+	margin-top:0%;
+	border: 1px solid #000000;
+}
+
+.news_text {
+	font-size: 14px;
+	font-family: Verdana;
+	border: 1px solid #000000;
+}
+
+.page_number {
+	align: center;
+}
+
+#fade {
+	position: fixed;
+    top: 0;
+    left: 0; 
+	z-index: 9999; 
+	display: none; /*--по умолчанию скрыт--*/
+	width: 100%;
+    height: 100%;
+	background: #000;
+	opacity: .70;/* Полупрозрачность слоя затемнения */
+	filter:progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+}
+/*--Модальное окно--*/
+.popup_block{
+	position: fixed;
+	top: 50%;
+    left: 50%;
+	z-index: 99999;
+	display: none; /*--по умолчанию скрыт--*/
+	float: left;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box; 
+    box-sizing: content-box;
+	padding: 15px;
+	border: 10px solid #6e6e6e;
+/*-- скругленные углы--*/
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: #fff;
+/*--тени для блока--*/
+	-webkit-box-shadow: 0px 0px 20px #000;
+	-moz-box-shadow: 0px 0px 20px #000;
+	box-shadow: 0px 0px 20px #000;
+    color: #000;
+	font-size: .9em;
+}
+/*--Фиксированное позиционирование для тупого IE6--*/
+*html #fade {
+	position: absolute;
+}
+*html .popup_block {
+	position: absolute;
+}
+/*--Блок содержания--*/
+.note{
+	margin:0 0 30px 0;
+}
+.note img{
+    float:left;
+	margin:5px 10px 5px 0;
+	width: 100px;
+	height: 100px;
+}
+.note h1{
+	color: #008000;
+	text-shadow: 0 1px 3px rgba(0,0,0,.3);
+    font:24px Monotype Corsiva, Arial;      
+	}
+/* формируем кнопку закрытия */
+.close {
+    position: absolute;
+    top: -18px;
+    right: -18px;
+    width: 24px;
+    height: 24px;
+    border: 2px solid #ccc;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    border-radius: 15px;
+    background-color: rgba(61, 61, 61, 0.8);
+    -webkit-box-shadow: 0px 0px 10px #000;
+    -moz-box-shadow: 0px 0px 10px #000;
+    box-shadow: 0px 0px 10px #000;
+    text-align: center;
+    text-decoration: none;
+    font-weight: bold;
+    line-height: 20px;
+    -webkit-transition: all ease .8s;
+    -moz-transition: all ease .8s;
+    -ms-transition: all ease .8s;
+    -o-transition: all ease .8s;
+    transition: all ease .8s;
+}
+.close:before {
+    color: rgba(255, 255, 255, 0.9);
+    content: "X";
+    text-shadow: 0 -1px rgba(0, 0, 0, 0.9);
+    font-size: 12px;
+}
+.close:hover {
+    background-color: rgba(252, 20, 0, 0.8);
+/*--крутим кнопку при наведении--*/
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    -ms-transform: rotate(360deg);
+    -o-transform: rotate(360deg);
+    transform: rotate(360deg);    
+}
+/* контактная форма */
+#form{
+    overflow: hidden;
+    margin: 0 auto;
+    padding-top: 10px;
+/* устанавливаем необходимую ширину формы в зависимости от дизайна
+ ** форма отлично растягивается */
+    width: 100%;
+    border: 1px solid #D3D3D3;
+/* закругляем углы */
+    border-radius:8px;
+    background: none repeat scroll 0 0 #FFFFFF;
+/* добавляем тени для блока*/
+    box-shadow: 0 0 5px #CCCCCC, 1px 1px 0 #FFFFFF inset, -1px -1px 0 #FFFFFF inset, 0 0 15px #DDDDDD inset;
+    text-align: left;
+}
+/* формируем элементы внутри формы */
+#form fieldset{
+    display:inline;
+    float:left;
+    margin:0;
+    margin-left:26px;
+    padding:0;
+    width: 42%;
+    border:none;	
+}		
+ 
+#form p{
+    margin:.5em 0;
+}
+/* подписи к полям ввода */	
+#form label{
+    display:block;
+    margin-bottom:1px;
+    color:#5B5B5B;
+}	
+#form input, #form textarea{
+    padding:3px;
+/* отключаем бордюры у инпутов и текстового поля */
+    border: none;
+/* закругляем углы полей ввода */
+    -webkit-border-radius:.3em;
+    -moz-border-radius:.3em;
+    border-radius:.3em;		
+    background-color: #F7F7F7;
+/* добавляем внутренние тени у инпутов и текстового поля */
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.1), inset 0 1px 2px rgba(0,0,0,0.3);
+    color: #5B5B5B;
+    font:13px Trebuchet MS, Arial, Helvetica, Sans-Serif;
+}
+#form input {
+/* устанавливаем ширину инпутов */
+width:90%;
+}
+/* изменяем оформление полей ввода при фокусе */
+#form input:focus, #form textarea:focus {
+  background: #F2F2F2;
+  box-shadow: inset 0 0 5px rgba(0,0,0,0.2), inset 0 1px 2px rgba(0,0,0,0.4);
+  color: #333;
+}
+#form textarea{
+    overflow:auto;
+    width:100%;
+/* устанавливаем ширину текстового поля */
+    height:120px;
+}
+/* формируем нижний сектор формы */					
+#form p.submit{
+    clear:both;
+    margin:0;
+    padding: 10px 25px 20px;
+    text-align:right;
+}
+/* оформляем кнопку отправки */	
+#form button{
+/* устанавливаем необходимую ширину кнопки */
+    border: solid 1px #2f96b4;
+/* закругляем углы кнопки */
+    border-radius: 5px;
+    background-color: #49AFCD;
+/* градиентная заливка для современных браузеров */	
+    background-image:-moz-linear-gradient(center top , #5BC0DE, #2F96B4);
+    background-image: -webkit-linear-gradient(center top, #5bc0de, #2f96b4);
+    background-image: -ms-linear-gradient(#5bc0de, #2f96b4);
+    background-image:-o-linear-gradient(center top , #5BC0DE, #2F96B4);
+/* добавляем внешние тени */
+    box-shadow: 0 1px 2px rgba(0,0,0,0.4);
+    color:#fff;
+    padding:0 12px;
+    text-align:center;
+    line-height:28px;
+/* градиент для IE6-9 */
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#5BC0DE', EndColorStr='#2F96B4', GradientType=0); 
+    cursor:pointer;
+}
+/* изменяем оформление кнопки при наведении */
+#form button:hover {
+    border-color: #2C8BA5;
+    box-shadow: none;
+}
+/* изменяем оформление кнопки при нажатии */
+#form button:active {
+    border-bottom: 1px solid #5BC0DE;
+    background-image:-moz-linear-gradient(#2F96B4, #5BC0DE); /* Firefox */
+    background-image: -webkit-linear-gradient(#2F96B4, #5BC0DE); /* Chrome, Safari */
+    background-image: -ms-linear-gradient(#2F96B4, #5BC0DE); /* IE-10 */
+    background-image:-o-linear-gradient(#2F96B4, #5BC0DE); /* Opera */
+/* добавляем внутренние тени */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) inset;
+/* градиент для IE6-9 */
+    filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#2F96B4', EndColorStr='#5BC0DE', GradientType=0);
+}
+/* конец формы */

@@ -1,0 +1,48 @@
+.main_text {
+	width: 70%;
+	margin: 0 auto;
+}
+
+.main_text_contact {
+	float: center;
+	margin-left: 15%;
+	margin-right: 15%;
+	float: left;
+}
+
+.zebra {
+	list-style: none;
+	padding: 0;
+	font-family: "Lucida Sans";
+}
+
+.zebra li {
+	padding: 10px;
+}
+
+.zebra li:nth-child(odd) {
+	background: #e2d8e5;
+	border-radius: 10px;
+	margin-top: 1%;
+}
+
+.zebra li:nth-child(even) {
+	background: #c6b1cc;
+	border-radius: 10px;
+	margin-top: 1%;
+}
+
+.map {
+	margin-left: 50%;
+	margin-right: 5%;
+}
+
+h2 {
+	float: center;
+	font-family: 'Marck Script', cursive;
+}
+
+h4 {
+	font-family: 'Marck Script', cursive;
+	font-size: 18px;
+}

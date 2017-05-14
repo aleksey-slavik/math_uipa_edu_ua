@@ -1,0 +1,206 @@
+#fade {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+	display: none;
+	width: 100%;
+	height: 100%;
+	background: #000;
+	opacity: .70;
+	filter: progid:DXImageTransform.Microsoft.Alpha(opacity=70);
+}
+
+.popup_block {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 99999;
+	display: none;
+	float: left;
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	padding: 15px;
+	border: 10px solid #6e6e6e;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+	background: #fff;
+	-webkit-box-shadow: 0px 0px 20px #000;
+	-moz-box-shadow: 0px 0px 20px #000;
+	box-shadow: 0px 0px 20px #000;
+	color: #000;
+	font-size: .9em;
+}
+
+* html #fade {
+	position: absolute;
+}
+
+* html .popup_block {
+	position: absolute;
+}
+
+.note {
+	margin: 0 0 30px 0;
+}
+
+.note img {
+	float: left;
+	margin: 5px 10px 5px 0;
+	width: 100px;
+	height: 100px;
+}
+
+.note h1 {
+	color: #008000;
+	text-shadow: 0 1px 3px rgba(0, 0, 0, .3);
+	font: 24px Monotype Corsiva, Arial;
+}
+
+.close {
+	position: absolute;
+	top: -18px;
+	right: -18px;
+	width: 24px;
+	height: 24px;
+	border: 2px solid #ccc;
+	-webkit-border-radius: 15px;
+	-moz-border-radius: 15px;
+	-ms-border-radius: 15px;
+	-o-border-radius: 15px;
+	border-radius: 15px;
+	background-color: rgba(61, 61, 61, 0.8);
+	background: url('/math/images/exit.png');
+	-webkit-box-shadow: 0px 0px 10px #000;
+	-moz-box-shadow: 0px 0px 10px #000;
+	box-shadow: 0px 0px 10px #000;
+	text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+	line-height: 20px;
+	-webkit-transition: all ease .8s;
+	-moz-transition: all ease .8s;
+	-ms-transition: all ease .8s;
+	-o-transition: all ease .8s;
+	transition: all ease .8s;
+}
+
+.close:before {
+	color: rgba(255, 255, 255, 0.9);
+	background: url('/math/images/exit.png');
+}
+
+.close:hover {
+	background-color: rgba(252, 20, 0, 0.8);
+	-webkit-transform: rotate(360deg);
+	-moz-transform: rotate(360deg);
+	-ms-transform: rotate(360deg);
+	-o-transform: rotate(360deg);
+	transform: rotate(360deg);
+}
+
+#form {
+	overflow: hidden;
+	margin: 0 auto;
+	padding-top: 10px;
+	width: 100%;
+	border: 1px solid #D3D3D3;
+	border-radius: 8px;
+	background: none repeat scroll 0 0 #FFFFFF;
+	box-shadow: 0 0 5px #CCCCCC, 1px 1px 0 #FFFFFF inset, -1px -1px 0
+		#FFFFFF inset, 0 0 15px #DDDDDD inset;
+	text-align: left;
+}
+
+#form fieldset {
+	display: inline;
+	float: left;
+	margin: 0;
+	margin-left: 26px;
+	padding: 0;
+	width: 42%;
+	border: none;
+}
+
+#form p {
+	margin: .5em 0;
+}
+
+#form label {
+	display: block;
+	margin-bottom: 1px;
+	color: #5B5B5B;
+}
+
+#form input, #form textarea {
+	padding: 3px;
+	border: none;
+	-webkit-border-radius: .3em;
+	-moz-border-radius: .3em;
+	border-radius: .3em;
+	background-color: #F7F7F7;
+	box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.1), inset 0 1px 2px
+		rgba(0, 0, 0, 0.3);
+	color: #5B5B5B;
+	font: 13px Trebuchet MS, Arial, Helvetica, Sans-Serif;
+}
+
+#form input {
+	width: 90%;
+}
+
+#form input:focus, #form textarea:focus {
+	background: #F2F2F2;
+	box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2), inset 0 1px 2px
+		rgba(0, 0, 0, 0.4);
+	color: #333;
+}
+
+#form textarea {
+	overflow: auto;
+	width: 100%;
+	height: 120px;
+}
+
+p.submit {
+	clear: both;
+	margin: 0;
+	padding: 10px 25px 20px;
+	text-align: right;
+}
+
+button {
+	border: solid 1px #2f96b4;
+	border-radius: 5px;
+	background-color: #49AFCD;
+	background-image: -moz-linear-gradient(center top, #5BC0DE, #2F96B4);
+	background-image: -webkit-linear-gradient(center top, #5bc0de, #2f96b4);
+	background-image: -ms-linear-gradient(#5bc0de, #2f96b4);
+	background-image: -o-linear-gradient(center top, #5BC0DE, #2F96B4);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.4);
+	color: #fff;
+	padding: 0 12px;
+	text-align: center;
+	line-height: 28px;
+	filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#5BC0DE',
+		EndColorStr='#2F96B4', GradientType=0);
+	cursor: pointer;
+}
+
+button:hover {
+	border-color: #2C8BA5;
+	box-shadow: none;
+}
+
+button:active {
+	border-bottom: 1px solid #5BC0DE;
+	background-image: -moz-linear-gradient(#2F96B4, #5BC0DE);
+	background-image: -webkit-linear-gradient(#2F96B4, #5BC0DE);
+	background-image: -ms-linear-gradient(#2F96B4, #5BC0DE);
+	background-image: -o-linear-gradient(#2F96B4, #5BC0DE);
+	box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3) inset;
+	filter: progid:DXImageTransform.Microsoft.Gradient(StartColorStr='#2F96B4',
+		EndColorStr='#5BC0DE', GradientType=0);
+}

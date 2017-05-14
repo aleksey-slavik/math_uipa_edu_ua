@@ -1,0 +1,145 @@
+body {
+	margin: 0%;
+	height: 100%;
+	background: linear-gradient(rgb(172, 0, 215), rgb(130, 6, 255),
+		#723E81)no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.grid {
+	margin: auto;
+	position: relative;
+	padding-left: 96px;
+	max-width: 1000px;
+	list-style: none;
+	text-align: center;
+}
+
+.grid figure {
+	position: relative;
+	float: left;
+	overflow: hidden;
+	margin: 10px 10px;
+	min-width: 220px;
+	max-width: 280px;
+	max-height: 500px;
+	width: 48%;
+	background: #3085a3;
+	text-align: center;
+	cursor: pointer;
+}
+
+.grid figure img {
+	position: relative;
+	display: block;
+	min-height: 100%;
+	max-width: 100%;
+	opacity: 0.8;
+}
+
+.grid figure figcaption {
+	padding: 2em;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 1.25em;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.grid figure figcaption::before, .grid figure figcaption::after {
+	pointer-events: none;
+}
+
+.grid figure figcaption, .grid figure figcaption>a {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.grid figure figcaption>a {
+	z-index: 1000;
+	text-indent: 200%;
+	white-space: nowrap;
+	font-size: 0;
+	opacity: 0;
+}
+
+.grid figure h2 {
+	word-spacing: -0.15em;
+	font-weight: 300;
+}
+
+.grid figure h2 span {
+	font-weight: 800;
+}
+
+.grid figure h2, .grid figure p {
+	margin: 0;
+}
+
+.grid figure p {
+	letter-spacing: 1px;
+	font-size: 68.5%;
+}
+
+figure.element img {
+	max-width: none;
+	width: -webkit-calc(100% + 50px);
+	width: calc(100% + 50px);
+	opacity: 0.7;
+	-webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+	transition: opacity 0.35s, transform 0.35s;
+	-webkit-transform: translate3d(-40px, 0, 0);
+	transform: translate3d(-40px, 0, 0);
+}
+
+figure.element figcaption {
+	text-align: left;
+}
+
+figure.element figcaption>div {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	padding: 2em;
+	width: 100%;
+	height: 50%;
+}
+
+figure.element h2, figure.element p {
+	-webkit-transform: translate3d(0, 40px, 0);
+	transform: translate3d(0, 40px, 0);
+}
+
+figure.element h2 {
+	-webkit-transition: -webkit-transform 0.35s;
+	transition: transform 0.35s;
+}
+
+figure.element p {
+	color: rgba(255, 255, 255, 0.8);
+	opacity: 0;
+	-webkit-transition: opacity 0.2s, -webkit-transform 0.35s;
+	transition: opacity 0.2s, transform 0.35s;
+}
+
+figure.element:hover img, figure.element:hover p {
+	opacity: 1;
+}
+
+figure.element:hover img, figure.element:hover h2, figure.element p {
+	-webkit-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}
+
+figure.element:hover p {
+	-webkit-transition-delay: 0.05s;
+	transition-delay: 0.05s;
+	-webkit-transition-duration: 0.35s;
+	transition-duration: 0.35s;
+}

@@ -1,0 +1,68 @@
+<html>
+<head>
+	<title>Новини</title>
+	<link rel="shortcut icon" href="images/pi.png" type="image/png" />
+	<link rel="stylesheet" href="style/menu.css" type="text/css" media="all" />
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<div class="header">
+		<p>Кафедра Вищої та Прикладної Математики</p>
+	</div>
+	<div class="menu_top">
+		<ul id="menu">
+			<li>
+				<a href="content?command=ua_news">Головна</a>
+			</li>
+			<li>
+				<a href="content?command=ua_department">Кафедра</a> 
+				<ul>
+					<li>
+						<a href="content?command=ua_department">Склад кафедри</a>
+					</li>
+					<li>
+						<a href="content?command=ua_department">Історія кафедрии</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="content?command=ua_science">Наукова діяльність</a>
+				<ul>
+					<li>
+						<a href="content?command=ua_publishings">Публікації</a>
+					</li>
+					<li>
+						<a href="content?command=ua_conferences">Конференції</a>
+					</li>
+				</ul>
+			</li>
+			<li>
+				<a href="content?command=ua_students">Студентам</a>
+			</li>
+			<li>
+				<a href="content?command=ua_entants">Абітурієнтам</a>
+			</li>
+			<li>
+				<a href="content?command=ua_contacts">Контакти</a>
+			</li>
+		</ul>
+	</div>
+	<table class="news_list">
+		<c:set var="k" value="0"/>
+		<c:forEach var="item" items="${news_item}">
+			<c:set var="k" value="${k+1}"/>
+			<tr class="news_item">
+				<td rowspan=4><img class="news_image" src="<%= request.getContextPath() %>${item.image}"/></td>
+				<td>
+				<tr><td><p class="news_title">${item.title}</p></td></tr>
+				<tr><td><p class="news_date">${item.date}</p></td></tr>
+				<tr><td><p class="news_text">${item.text}</p></td></tr>
+				</td>
+			</tr>
+		</c:forEach>
+	</table>
+	<div class="footer">
+		<p>&copy;2016</p>
+	</div>
+</body>
+</html>
